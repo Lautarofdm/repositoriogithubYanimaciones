@@ -1,0 +1,126 @@
+*{
+    margin: 5px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/fondo);
+    background-size: 100vw;
+  }
+  .container {  display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "header header header"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* ENCABEZADO */
+  
+    .header1 { grid-area: header; 
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+  }
+  .logo{
+  width: 15rem;
+  }
+  .nav{
+    display: flex;
+      list-style: none;
+      width: 40vw;
+      justify-content: space-around;
+      flex-wrap: wrap;
+  }
+  .header1 form{
+      display: flex;
+      padding: 5rem;
+  }
+    /* CUERPO */
+  
+    .main1 { grid-area: main; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+  .banner{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .prod1{
+  display: flex;
+  padding: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+  }
+  
+  .prod1 img{
+    width: 250px;
+  }
+    /* PIE */
+    .footer1 { grid-area: footer; 
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+  }
+  .marcas img{
+    width: 50px;
+    flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  .contact{
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+    }
+    /* header */
+    .header1 {
+        background-color: aqua;
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header1 img {
+        width: 12rem;
+    }
+  
+    .header1 ul {
+        display: flex;
+        list-style: none;
+        width: 50vw;
+    }
+    /* footer */
+    .footer1{
+      background-color: aqua;
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer1 img{
+      width: 25px;
+    }
+    .footer1 ul{
+      list-style: none;
+    }
+  }
